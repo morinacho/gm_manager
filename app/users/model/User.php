@@ -1,5 +1,4 @@
 <?php  
-
 	class User{
 		private $db;
 		
@@ -9,11 +8,11 @@
 
 		public function getByEmail($email){
 			$email =  $this->db->deleteSpecialChars($email,'email'); 
-			$this->db->query('SELECT * FROM  user WHERE user_email = :email');
-			$this->db->bind(':email', $email);
+			$this->db->query('SELECT user_id, user_name, user_lastname, user_password, user_email, user_status
+				              FROM  user WHERE user_email = :email');
+			$this->db->bind(':email', $email); 
 
-			$response = $this->db->getRecord();
-			return $response;
+			return $this->db->getRecord();
 		}
 
 		public function userRecord($param){

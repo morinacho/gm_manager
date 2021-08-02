@@ -16,23 +16,6 @@
 		# Load view
 		public function view($view, $param = []){
 			session_start();
-			/*
-			$access_identifier = "public";
-
-			if(Controller::authenticated()){
-				$_SESSION['role'] == 1 ? $access_identifier == "admin" : $access_identifier = "user";
-			}
-
-			require_once APP_ROUTE . "/main/view/$access_identifier/components";
-
-			if (file_exists('../app/'. $this->class  .'/view/' . $view . '.php')){
-				require_once '../app/'. $this->class  .'/view/' . $view . '.php';
-			}
-			else{
-				require_once APP_ROUTE . '/main/view/public/404.php';
-			}
-			*/
-
 			require_once APP_ROUTE . '/main/view/components/header.php'; 
 
 			if(Controller::authenticated()){

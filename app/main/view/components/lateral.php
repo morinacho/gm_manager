@@ -12,6 +12,22 @@
                     </div>
                 </li>
             </a>
+            <?php 
+               /* $options = $_SESSION['options'];
+                
+                foreach ($options as $option) {
+                    print_r($option);
+                   /* echo "
+                        <a href='<?php echo URL_ROUTE ?>customers'>
+                            <li class='list-group-item d-flex justify-content-between align-items-start'>
+                                <div class='ms-2 me-auto'><span class='material-icons'>people_outline</span>Clientes</div>
+                            </li>
+                        </a>
+                        $option
+                        "; 
+                } */
+                 
+            ?>
             <a href="<?php echo URL_ROUTE ?>customers">
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto"><span class="material-icons">people_outline</span>Clientes

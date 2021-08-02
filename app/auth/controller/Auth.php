@@ -1,9 +1,11 @@
 <?php  
 	class Auth extends Controller{
 		private $userModel;
+		private $mainModel;
 
 		public function __construct(){
 			$this->userModel = $this->model('User','users');
+			$this->mainModel = $this->model('Main','main');
 			session_start(); 
 		}
 
@@ -16,17 +18,9 @@
 					
 					if(!empty($user) && password_verify($pass, $user->user_password)){
 						$_SESSION['username'] = "$user->user_name $user->user_lastname";
-						
-						$_SESSION['role']  = $user->role_id;
-						switch ($$user->role_id) {
-							case '1':
-								redirect('main');
-								break;
-							
-							default:
-							redirect('login');
-								break;
-						}
+						$_SESSION['options'] = $this->mainModel->getUserOptions($user->user_id);
+						$_SESSION['actions'] = [4,5,6];
+ 						redirect('main');
 					} 
 					else{ 
 						redirect('login');
