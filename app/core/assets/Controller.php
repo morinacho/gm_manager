@@ -37,3 +37,4 @@
 			return (isset($_SESSION['username']));
 		}
 	}
+?>

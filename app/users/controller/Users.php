@@ -5,9 +5,13 @@
 			parent::__construct();
 		}
 
-		public function index(){}
+		public function index(){
+			$this->view('index');
+		}
 
-		public function create(){}
+		public function create_resource(){ 
+			$this->view('create-resource');
+		}
 
 		public function store(){}
 

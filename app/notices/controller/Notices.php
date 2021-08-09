@@ -1,5 +1,5 @@
 <?php
-    class Customers extends Controller{
+    class Notices extends Controller{
 
         public function __construct(){
 			parent::__construct();

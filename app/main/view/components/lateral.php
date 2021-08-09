@@ -1,74 +1,75 @@
-<div class="row mt-3">
+<div class="row mt-1">
     <div class="col-12">
         <p id="logo-title"><img src="<?php echo URL_ROUTE ?>media/system/icons/logo.png" /> GM 2.0</p>
-        <hr>
+  <hr>
     </div>
     <div class="col-12">
-        <ul class="list-group" id="lateral-action">
-            <a href="" class="active">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">home</span>Inicio
-
-                    </div>
-                </li>
-            </a>
-            <?php 
-               /* $options = $_SESSION['options'];
-                
-                foreach ($options as $option) {
-                    print_r($option);
-                   /* echo "
-                        <a href='<?php echo URL_ROUTE ?>customers'>
-                            <li class='list-group-item d-flex justify-content-between align-items-start'>
-                                <div class='ms-2 me-auto'><span class='material-icons'>people_outline</span>Clientes</div>
-                            </li>
-                        </a>
-                        $option
-                        "; 
-                } */
-                 
-            ?>
-            <a href="<?php echo URL_ROUTE ?>customers">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">people_outline</span>Clientes
-                    </div>
-                </li>
-            </a>
-            <a href="">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">filter_none</span>Orden de trabajo</div>
-                </li>
-            </a>
-            <a href="">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">email</span>Avisos</div>
-                </li>
-            </a>
-            <a href="">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">engineering</span>Recurso</div>
-                </li>
-            </a>
-            <a href="">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">cloud</span>Backup</div> 
-                </li>
-            </a>
-            <a href="">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">support_agent</span>Support</div> 
-                </li>
-            </a>
-            <a href="">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">security</span>Security</div> 
-                </li>
-            </a>
-            <a href="">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto"><span class="material-icons">settings</span>Settings</div> 
-                </li>
-            </a>
+        <ul class="accordion accordion-flush" id="menu-accodion">
+            <li class="accordion-item">
+                <a href=""class="accordion-button collapsed active" data-bs-toggle="collapse" data-bs-target="#home-actions">
+                    <span class="material-icons">home</span> Inicio
+                </a>
+                <ul id="home-actions" class="accordion-collapse collapse" data-bs-parent="#menu-accodion">
+                    <li><a href="<?php echo URL_ROUTE ?>main">Dashboard</a></li>
+                    <li><a href="<?php echo URL_ROUTE ?>main/cashregister">Caja</a></li>
+                </ul>
+            </li>
+            <li class="accordion-item">
+                <a href="" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#workorder-actions">
+                    <span class="material-icons">outbox</span>Orden de trabajo
+                </a>
+                <ul id="workorder-actions" class="accordion-collapse collapse" data-bs-parent="#menu-accodion">
+                    <li><a href="">Ver Ordenes de trabajo</a></li>
+                    <li><a href="">Agregar orden de trabajo</a></li>
+                </ul>
+            </li>
+            <li class="accordion-item">
+                <a href="" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#notices-actions">
+                    <span class="material-icons">email</span>Avisos
+                </a>
+                <ul id="notices-actions" class="accordion-collapse collapse" data-bs-parent="#menu-accodion">
+                    <li><a href="<?php echo URL_ROUTE ?>notices/index">Ver avisos activos</a></li>
+                    <li><a href="<?php echo URL_ROUTE ?>notices/create">Agregar avisos</a></li>
+                </ul>
+            </li>
+            <li class="accordion-item">
+                <a href="" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#customer-actions">
+                    <span class="material-icons">person</span>Clientes
+                </a>
+                <ul id="customer-actions" class="accordion-collapse collapse" data-bs-parent="#menu-accodion">
+                    <li><a href="<?php echo URL_ROUTE ?>customers/index">Ver clientes</a></li>
+                    <li><a href="<?php echo URL_ROUTE ?>customers/create">Registrar cliente</a></li>
+                </ul>
+            </li>
+            <li class="accordion-item">
+                <a href="" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#resource-actions">
+                    <span class="material-icons">manage_accounts</span>Recurso
+                </a>
+                <ul id="resource-actions" class="accordion-collapse collapse" data-bs-parent="#menu-accodion">
+                    <li><a href="<?php echo URL_ROUTE ?>users/index"">Ver recurso</a></li>
+                    <li><a href="<?php echo URL_ROUTE ?>users/create_resource">Agregar recurso</a></li>
+                </ul>
+            </li>
+            <li class="accordion-item">
+                <a href="<?php echo URL_ROUTE ?>main/backup" class="accordion-button collapsed">
+                    <span class="material-icons">cloud</span>Backup
+                </a> 
+            </li>
+            <li class="accordion-item">
+                <a href="<?php echo URL_ROUTE ?>main/support" class="accordion-button collapsed">
+                    <span class="material-icons">support_agent</span>Support
+                </a> 
+            </li>
+            <li class="accordion-item">
+                <a href="<?php echo URL_ROUTE ?>main/security" class="accordion-button collapsed">
+                    <span class="material-icons">security</span>Security
+                </a>
+            </li>
+            <li class="accordion-item">
+                <a href="<?php echo URL_ROUTE ?>main/settings" class="accordion-button collapsed">
+                    <span class="material-icons">settings</span>Settings
+                </a> 
+            </li>
         </ul>
     </div>
     <div class="col-12">
@@ -82,4 +83,5 @@
             </div>
         </a> 
     </div>
+    
 </div>

@@ -15,3 +15,4 @@
 
 	# Site name
 	define('SITENAME', 'GM Contable');  # Put the name of the site
+?>

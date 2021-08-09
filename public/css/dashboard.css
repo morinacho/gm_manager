@@ -12,7 +12,6 @@
 
 #dashboard-lateral {
   border-radius: 5% 0;
-  box-shadow: inset -2px 0px 20px rgb(224, 224, 224);
   background-color: rgb(255, 255, 255);
   height: 100vh;
 }
@@ -21,47 +20,59 @@
 }
 #lateral-header .btn-group a {
   padding: 5px;
-  color: #5a5a5a;
+  color: #968282;
+}
+.accordion-button::after {
+  background-image: none;
 }
 
-ul#lateral-action {
-  padding: 0;
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
 }
-#lateral-action li {
-  margin-bottom: 12px;
-  border: none;
-  padding: 5px;
-  text-align: center;
+
+#menu-accodion{
+  padding: 0px;
 }
-#lateral-action li:hover {
+
+ul#menu-accodion li.accordion-item{
+  padding: 0px 5px; 
+}
+a.accordion-button{
+  color: #474747;
+  padding: 10px 0px;
+  padding-left: 5px;
+}
+a.accordion-button:hover, a.accordion-button:after, .accordion-button:not(.collapsed){
+  color: #1D4998;
+}
+.accordion-button:focus {
+  background-color: rgb(230, 230, 230);
+  box-shadow: none;
+  border-radius: 5px; 
+}
+.accordion-item ul li {
+  padding-left: 0px;
+  padding: 2px;
+}
+.accordion-item ul li:hover{
   background-color: rgb(230, 230, 230);
   border-radius: 5px;
-  text-align: center;
 }
-
-#lateral-action a li{
+.accordion-item ul li a{
   color: #474747;
 }
-#lateral-action a.active li {
+.accordion-item ul li a:hover{
   color: #1D4998;
 }
-#lateral-action a li:hover{
-  color: #1D4998;
-}
-#lateral-action .material-icons {
-  padding-right: 8px;
+.accordion-button .material-icons{
+  padding-right: 5px;
 }
 
 #dashboard-principal {
-  background-color: #e4ecf1;
+  background-color: #f7f9fc;
+  color: #6c757d;
+}
+#dashboard-principal a{
+  color:#1D4998;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-  background-color: #1D4998;
-}
-.nav-link{
-  color: #1D4998;
-}
-
-.control-panel{
-}

@@ -2,6 +2,7 @@
 
 body {
   background-color: #dbdee3;
+  color:#1D4998;
 }
 
 ul li{
@@ -9,4 +10,18 @@ ul li{
 }
 a{
   text-decoration: none;
+}
+
+#login-button{
+  background-color: #1D4998;
+}
+
+#nav-home{
+  background-color: rgb(255, 255, 255);
+  box-shadow:  15px 0px 15px rgb(204, 204, 204);
+  padding: 4px;
+}
+ 
+.accordion-item {
+  border: 0px solid rgb(255, 255, 255);
 }

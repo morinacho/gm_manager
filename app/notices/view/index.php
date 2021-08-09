@@ -10,12 +10,12 @@
 			<!-- Breadcrumb -->
 			<div class="col-12 row mt-4">
 				<div class="col-9">
-					<h4>Ver Cliente</h4>
+					<h4>Ver Avisos</h4>
 				</div>
 				<div class="col-3">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="index">Cliente</a></li>
+							<li class="breadcrumb-item"><a href="index">Avisos</a></li>
 							<li class="breadcrumb-item active" aria-current="page">Ver</li>
 						</ol>
 					</nav>

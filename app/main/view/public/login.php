@@ -17,7 +17,7 @@
                         <input type="password" class="form-control" id="password" name="user-password" placeholder="********">
                     </div>
                     <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary btn-block" name="login">Iniciar Sesión</button>
+                        <button type="submit" id="login-button" class="btn btn-primary btn-block" name="login">Iniciar Sesión</button>
                     </div>
                 </form>
                 <div class="dropdown-divider"></div>
