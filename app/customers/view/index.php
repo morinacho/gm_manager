@@ -1,26 +1,33 @@
-<div class="row">
-    <div class="col-2" id="dashboard-lateral">
-        <?php require_once APP_ROUTE . '/main/view/components/lateral.php'?>
-    </div>
-    <div class="col-10" id="dashboard-principal"> 
-        <div class="row">
-    		<div class="col-12 content-align-right" id="nav-home">
-        		<?php require_once APP_ROUTE . '/main/view/components/nav.php';?>
-    		</div>
-			<!-- Breadcrumb -->
-			<div class="col-12 row mt-4">
-				<div class="col-9">
-					<h4>Ver Cliente</h4>
-				</div>
-				<div class="col-3">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="index">Cliente</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Ver</li>
-						</ol>
-					</nav>
-				</div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php require_once APP_ROUTE . '/main/view/components/top.php'?>
+<!-- principal content-->
+<div class="col-12 mt-4 row ms-0"> 
+	<div class="col-12 mb-3">
+		<h4>Clientes</h4>
+	</div>
+	<div class="card col-12 boxShadow">
+		<div class="card-body "> 
+			<h5 class="card-title"></h5>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+					<th scope="col">DNI</th>
+					<th scope="col">Nombre y Apellido</th>
+					<th scope="col">Teléfono</th>
+					<th scope="col">Mail</th>
+					<th scope="col">Editar</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">332211</th>
+						<td>Nombre y apellido</td>
+						<td>2233443</td>
+						<td>mail@mdo.com</td>
+						<td><a href="" class="material-icons">edit</a></td>
+					</tr> 
+				</tbody>
+			</table>
+		</div> 
+	</div> 
+</div> 
+<?php require_once APP_ROUTE . '/main/view/components/bottom.php'?>

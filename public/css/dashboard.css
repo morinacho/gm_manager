@@ -1,3 +1,7 @@
+.boxShadow{
+  box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 10%);
+}
+
 #logo-title {
   font-size: 1.5em;
   text-align: center;
@@ -11,9 +15,12 @@
 }
 
 #dashboard-lateral {
-  border-radius: 5% 0;
   background-color: rgb(255, 255, 255);
   height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 20%;
 }
 #lateral-header {
   text-align: center;
@@ -68,11 +75,15 @@ a.accordion-button:hover, a.accordion-button:after, .accordion-button:not(.colla
   padding-right: 5px;
 }
 
-#dashboard-principal {
-  background-color: #f7f9fc;
+#dashboard-principal { 
   color: #6c757d;
+  height: 100vh;
+  left: 20%;
+  position: relative;
+  top: 0;
+  width: 80%;
+
 }
 #dashboard-principal a{
   color:#1D4998;
 }
-

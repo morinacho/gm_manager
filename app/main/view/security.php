@@ -1,26 +1,13 @@
-<div class="row">
-    <div class="col-2" id="dashboard-lateral">
-        <?php require_once 'components/lateral.php';?>
-    </div>
-    <div class="col-10" id="dashboard-principal"> 
-        <div class="row">
-    		<div class="col-12 content-align-right" id="nav-home">
-        		<?php require_once 'components/nav.php';?>
-    		</div>
-			<!-- Breadcrumb -->
-			<div class="col-12 row mt-4">
-				<div class="col-10">
-					<h4>Seguridad</h4>
-				</div>
-				<div class="col-2">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="index">Inicio</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Seguridad</li>
-						</ol>
-					</nav>
-				</div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php require_once APP_ROUTE . '/main/view/components/top.php'?>
+<!-- principal content-->
+<div class="col-12 mt-4 row ms-0"> 
+	<div class="col-12 mb-3">
+		<h4>Seguridad</h4>
+	</div>
+	<div class="card col-12 boxShadow">
+		<div class="card-body">  
+			
+		</div> 
+	</div> 
+</div> 
+<?php require_once APP_ROUTE . '/main/view/components/bottom.php'?>
