@@ -84,6 +84,10 @@ a.accordion-button:hover, a.accordion-button:after, .accordion-button:not(.colla
   width: 80%;
 
 }
-#dashboard-principal a{
+#dashboard-principal a, .btn-outline-primary{
   color:#1D4998;
 }
+.btn-outline-primary:hover{
+  background-color: #1D4998;
+}
+ 

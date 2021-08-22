@@ -18,8 +18,7 @@
 					
 					if(!empty($user) && password_verify($pass, $user->user_password)){
 						$_SESSION['username'] = "$user->user_name $user->user_lastname";
-						$_SESSION['options'] = $this->mainModel->getUserOptions($user->user_id);
-						$_SESSION['actions'] = [4,5,6];
+						$_SESSION['options']  = $this->mainModel->getUserOptions($user->user_id);
  						redirect('main');
 					} 
 					else{ 

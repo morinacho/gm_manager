@@ -15,9 +15,14 @@
 
 		public function store(){}
 
-		public function show(){}
+		# Muestra la información completa de un cliente
+		public function show(){
+			$this->view('profile');
+		}
 
-		public function edit(){}
+		public function edit(){
+			$this->view('edit');
+		}
 
 		public function update(){}
 

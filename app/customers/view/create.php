@@ -61,6 +61,5 @@
             <button type="button" class="btn btn-outline-primary btn-sm">Registrar cliente</button>
         </div>
     </form>
-	
 </div> 
 <?php require_once APP_ROUTE . '/main/view/components/bottom.php'?>

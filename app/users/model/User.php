@@ -6,6 +6,10 @@
 			$this->db = new DataBase;
 		}
 
+		public function addUser($param){
+			$this->db->query('INSERT INTO user (user_name, user_lastname, user_address, user_password, user_email, user_status, user_phone, user_type_id) VALUES ()');
+		}
+
 		public function getByEmail($email){
 			$email =  $this->db->deleteSpecialChars($email,'email'); 
 			$this->db->query('SELECT user_id, user_name, user_lastname, user_password, user_email, user_status
