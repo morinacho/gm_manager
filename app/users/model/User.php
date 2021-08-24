@@ -7,7 +7,11 @@
 		}
 
 		public function addUser($param){
-			$this->db->query('INSERT INTO user (user_name, user_lastname, user_address, user_password, user_email, user_status, user_phone, user_type_id) VALUES ()');
+			$this->db->query('INSERT INTO user 
+								(user_name, user_lastname, user_address, user_password, user_email, user_status, user_phone, user_type_id) 
+							  VALUES 
+							  	()
+			');
 		}
 
 		public function getByEmail($email){

@@ -9,7 +9,7 @@
                 foreach ($_SESSION['options'] as $option) {
                     echo"
                         <li class='accordion-item'>
-                            <a href='' class='accordion-button collapsed' data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->option_id ."'>
+                            <a href='". URL_ROUTE . $action->action_url ."' class='accordion-button collapsed' data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->option_id ."'>
                                 <span class='material-icons'>".$option[0]->option_icon."</span>". $option[0]->option_desc ."
                             </a>
                         
@@ -27,17 +27,7 @@
                     }
                     echo "</li>";
                 } 
-            ?>
-            <li class='accordion-item'>
-                <a href=''class='accordion-button collapsed active' data-bs-toggle='collapse' data-bs-target='#home-actions'>
-                    <span class='material-icons'>home</span> Inicio
-                </a>
-                <ul id='home-actions' class='accordion-collapse collapse' data-bs-parent='#menu-accodion'>
-                    <li><a href='<?php echo URL_ROUTE ?>main'>Dashboard</a></li>
-                    <li><a href='<?php echo URL_ROUTE ?>main/cashregister'>Caja</a></li>
-                </ul>
-            </li>
-            
+            ?>            
         </ul>
     </div>
     <div class="col-12">

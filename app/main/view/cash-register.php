@@ -1,7 +1,9 @@
 <?php require_once APP_ROUTE . '/main/view/components/top.php'?>
 	<!-- Cards-->
 	<div class="col-12 row mt-3 justify-content-around">
-	
+		<div class="col-12">
+			<h4>Caja</h4>
+		</div>
 		<div class="card col-3"  >
 			<div class="card-body">
 				<h5 class="card-title">Card title</h5>

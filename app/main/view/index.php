@@ -1,10 +1,10 @@
 <?php require_once APP_ROUTE . '/main/view/components/top.php';?> 
 	<!-- Cards-->
 	<div class="col-12 row mt-3 justify-content-around">
-	<div class="col-12">
+		<div class="col-12">
 			<h4>Dashboard</h4>
 		</div>
-	<div class="card col-3 boxShadow">
+		<div class="card col-3 boxShadow">
 			<div class="card-body">
 				<h5 class="card-title">Card title</h5>
 				<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
