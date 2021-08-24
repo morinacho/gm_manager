@@ -9,7 +9,7 @@
                 foreach ($_SESSION['options'] as $option) {
                     echo"
                         <li class='accordion-item'>
-                            <a href='". URL_ROUTE . $action->action_url ."' class='accordion-button collapsed' data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->option_id ."'>
+                            <a href='". URL_ROUTE  ."' class='accordion-button collapsed' data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->option_id ."'>
                                 <span class='material-icons'>".$option[0]->option_icon."</span>". $option[0]->option_desc ."
                             </a>
                         
