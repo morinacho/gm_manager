@@ -7,12 +7,18 @@
         <ul class="accordion accordion-flush" id="menu-accodion">
             <?php
                 foreach ($_SESSION['options'] as $option) {
+                    $optionURL = "";
+                    $dataBS = "data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->option_id ."'";
+                    
+                    if($option[0]->option_url != NULL){
+                        $optionURL = URL_ROUTE . $option[0]->option_url;
+                        $dataBS = "";
+                    } 
                     echo"
                         <li class='accordion-item'>
-                            <a href='". URL_ROUTE  ."' class='accordion-button collapsed' data-bs-toggle='collapse' data-bs-target='#actions-". $option[0]->option_id ."'>
+                            <a href='$optionURL' class='accordion-button collapsed' $dataBS>
                                 <span class='material-icons'>".$option[0]->option_icon."</span>". $option[0]->option_desc ."
                             </a>
-                        
                     ";
                     if(!empty($option[1])){
                         echo "

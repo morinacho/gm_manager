@@ -7,7 +7,7 @@
         }
 
         public function getUserOptions($userId){
-            $this->db->query('SELECT op.option_id, op.option_desc, op.option_icon 
+            $this->db->query('SELECT op.option_id, op.option_desc, op.option_icon, op.option_url
                               FROM option op 
                               INNER JOIN option_has_user ou
                               ON op.option_id = ou.option_id
