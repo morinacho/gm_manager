@@ -1,9 +1,15 @@
-<?php require_once APP_ROUTE . '/main/view/components/top.php'?>
+<?php require_once APP_ROUTE . '/main/view/components/top.php';?>
 <!-- principal content-->
 <div class="col-12 mt-4 row ms-0"> 
-	<div class="col-12 mb-3">
+	<div class="col-7 mb-3">
 		<h4>Recursos</h4>
 	</div>
+	<form action="" class="col-5">
+		<div class="input-group">
+			<input type="text" class="form-control" id="search-users" name="search-users" placeholder="Buscar recurso">
+			<div class="input-group-text material-icons">search</div>
+		</div>
+	</form>
 	<div class="card col-12 boxShadow">
 		<div class="card-body "> 
 			<h5 class="card-title"></h5>
@@ -18,13 +24,19 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row">332211</th>
-						<td>Nombre y apellido</td>
-						<td>2233443</td>
-						<td>mail@mdo.com</td>
-						<td><a href="" class="material-icons">edit</a></td>
-					</tr> 
+					<?php
+						foreach ($param["users"] as $user){ 
+							echo "
+								<tr>
+									<th scope='row'>$user->user_document</th>
+									<td><a href='".URL_ROUTE."users/show/$user->user_document'>$user->user_name $user->user_lastname</a></td>
+									<td>$user->user_phone</td>
+									<td>$user->user_email</td>
+									<td><a href='". URL_ROUTE."users/edit/$user->user_document' class='material-icons'>edit</a></td>
+								</tr> 
+							";
+						}
+					?> 
 				</tbody>
 			</table>
 		</div> 

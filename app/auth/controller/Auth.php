@@ -14,7 +14,7 @@
 				if(isset($_POST['user-email']) && isset($_POST['user-password'])){
 					$email = $_POST['user-email'];
 					$pass  = $_POST['user-password'];
-					$user  = $this->userModel->getByEmail($email);
+					$user  = $this->userModel->getUserByEmail($email);
 					
 					if(!empty($user) && password_verify($pass, $user->user_password)){
 						$_SESSION['username'] = "$user->user_name $user->user_lastname";
@@ -30,33 +30,7 @@
 				}
 			}			
 		}
-
-		public function register(){
-			if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['register'])){
-				$options =  ['cost' => 12];
-				$pass    =  password_hash(trim($_POST['user-password']), PASSWORD_BCRYPT, $options);
-				$param   =  [
-					'user-nick' 	=> trim($_POST['user-nick']),
-					'user-email' 	=> trim($_POST['user-email']),
-					'user-password' => $pass
-				];
-				if($this->userModel->userRecord($param)){
-					redirect('home');
-				}
-				else{
-					die("FATAL ERROR");
-				}
-			}
-			else{
-				$param = [
-					'user-name' 	=> '',
-					'user-lastname' => '',
-					'user-phone' 	=> '',
-					'user-address' 	=> ''
-				];
-			}
-
-		}
+		
 		public function forgotPassword(){
 			$this->view("forgot-pass");
 		}
