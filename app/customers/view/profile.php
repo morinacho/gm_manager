@@ -1,11 +1,15 @@
 <?php require_once APP_ROUTE . '/main/view/components/top.php'?>
 <div class="col-12 mt-4 row ms-0"> 
 	<div class="col-12 mb-3">
-		<h4 class="mb-2">Nombre y apellido - <small>Tipo de cliente</small></h4> 
-        <span class="material-icons">phone</span>223344556677
-        <span class="material-icons"> email</span> direcciondecorreo@mail.com
-        <span class="material-icons">report</span>Clave fiscal 1
-        <span class="material-icons">report</span>Clave fiscal 2
+        <?php 
+            echo "
+		        <h4 class='mb-2'>". $param['customer']->client_name ." " . $param['customer']->client_lastname ." - <small>Tipo de cliente</small></h4> 
+                <span class='material-icons'>phone</span>".$param['customer']->client_phone."
+                <span class='material-icons'> email</span>".$param['customer']->client_email."
+                <span class='material-icons'>report</span>Clave fiscal 1
+                <span class='material-icons'>report</span>Clave fiscal 2
+            "; 
+        ?>
 	</div>
               
     <div class="card col-12 boxShadow ms-0 mt-2">

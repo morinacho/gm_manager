@@ -25,13 +25,19 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row">332211</th>
-						<td><a href="<?php echo URL_ROUTE?>customers/show">Nombre y apellido</a></td>
-						<td>2233443</td>
-						<td>mail@mdo.com</td>
-						<td><a href="<?php echo URL_ROUTE?>customers/edit" class="material-icons">edit</a></td>
-					</tr> 
+					<?php  
+						foreach ($param["customers"] as $customer){ 
+							echo "
+								<tr>
+									<th scope='row'>$customer->client_document</th>
+									<td><a href=' ".URL_ROUTE."customers/show/$customer->client_document'>$customer->client_name $customer->client_lastname</a></td>
+									<td>$customer->client_phone</td>
+									<td>$customer->client_email</td>
+									<td><a href=' ".URL_ROUTE."customers/edit/$customer->client_document' class='material-icons'>editar</a></td>
+								</tr>
+							"; 
+						}
+				    ?>
 				</tbody>
 			</table>
 		</div> 

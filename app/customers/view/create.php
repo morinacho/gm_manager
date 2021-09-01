@@ -4,7 +4,7 @@
 	<div class="col-12 mb-3">
 		<h4>Registrar Cliente</h4>
 	</div>
-    <form class="col-12 row justify-content-between" action="">
+    <form class="col-12 row justify-content-between" method="POST" action="<?php echo URL_ROUTE?>customers/store">
         <div class="card col-6 boxShadow"> 
             <div class="card-body">  
                 <h5 class="card-title">Datos Personales</h5>
@@ -21,8 +21,8 @@
                     <input type="text" class="form-control form-control-sm" id="customer-document" name="customer-document" placeholder="Ingresar número de documento">
                 </div>
                 <div class="mb-3 mt-3">
-                    <label for="customer-mail" class="form-label">Email</label>
-                    <input type="mail" class="form-control form-control-sm" id="customer-mail" name="customer-mail" placeholder="ejemplo@mail.com">
+                    <label for="customer-email" class="form-label">Email</label>
+                    <input type="mail" class="form-control form-control-sm" id="customer-email" name="customer-email" placeholder="ejemplo@mail.com">
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="customer-phone" class="form-label">Teléfono</label>
@@ -58,7 +58,7 @@
             </div>  
         </div> 
         <div class="mb-3 mt-3 d-grid gap-2">
-            <button type="button" class="btn btn-outline-primary btn-sm">Registrar cliente</button>
+            <button type="submit" class="btn btn-outline-primary btn-sm" name="register-customer" >Registrar cliente</button>
         </div>
     </form>
 </div> 

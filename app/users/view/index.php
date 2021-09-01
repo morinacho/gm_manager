@@ -32,7 +32,7 @@
 									<td><a href='".URL_ROUTE."users/show/$user->user_document'>$user->user_name $user->user_lastname</a></td>
 									<td>$user->user_phone</td>
 									<td>$user->user_email</td>
-									<td><a href='". URL_ROUTE."users/edit/$user->user_document' class='material-icons'>edit</a></td>
+									<td><a href='".URL_ROUTE."users/edit/$user->user_document' class='material-icons'>edit</a></td>
 								</tr> 
 							";
 						}
