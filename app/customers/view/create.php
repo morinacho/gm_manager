@@ -1,4 +1,4 @@
-<?php require_once APP_ROUTE . '/main/view/components/top.php'?>
+<?php require_once APP_ROUTE . '/main/view/components/top.php';?>
 <!-- principal content-->
 <div class="col-12 mt-4 row ms-0"> 
 	<div class="col-12 mb-3">
@@ -21,6 +21,10 @@
                     <input type="text" class="form-control form-control-sm" id="customer-document" name="customer-document" placeholder="Ingresar número de documento">
                 </div>
                 <div class="mb-3 mt-3">
+                    <label for="customer-cuil" class="form-label">Cuil/Cuit</label>
+                    <input type="text" class="form-control form-control-sm" id="customer-cuil" name="customer-cuil" placeholder="Ingresar cuil/cuit">
+                </div>
+                <div class="mb-3 mt-3">
                     <label for="customer-email" class="form-label">Email</label>
                     <input type="mail" class="form-control form-control-sm" id="customer-email" name="customer-email" placeholder="ejemplo@mail.com">
                 </div>
@@ -36,9 +40,13 @@
                 <div class="mb-3 mt-3">
                     <select class="form-select" name="customer-type">
                         <option selected disabled>Seleccionar denominación</option>
-                        <option value="1">Persona Fisica - Monotributista</option>
-                        <option value="2">Persona Fisica - Responsable Inscripto</option>
-                        <option value="3">Persona Juridica - Responsable Inscripto</option>
+                        <?php
+                            foreach ($param['customertypes'] as $type) {
+                                echo "
+                                <option value='$type->customer_type_id'>$type->customer_type_desc</option>
+                                "; 
+                            }
+                        ?> 
                     </select>
                 </div>
                 <div class="mb-3 mt-3">
